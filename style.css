@@ -1,0 +1,58 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.banner {
+    background-color: rgba(255, 20, 145, 0.434);
+    width: 90vw;
+    height: 80vh;
+    margin-left: 5vw;
+    border: 5px solid red;
+    position: relative;
+    perspective: 500px;
+    /* Added perspective to enhance the 3D effect */
+}
+
+img {
+    border: 2px dashed white;
+    width: 250px;
+    height: 250px;
+    position: absolute;
+    /* transition: transform 0.5s; */
+        /* Added transition for a smoother effect */
+}
+
+img:hover {
+    animation: zooming 1s ease-in-out 0.1s 1 normal none;
+}
+
+.one {
+    top: 0%;
+    left: 0%;
+}
+
+.two {
+    top: 20%;
+    left: 20%;
+}
+
+.three {
+    top: 40%;
+    left: 40%;
+}
+
+@keyframes zooming {
+    0% {
+        transform: translateZ(0);
+    }
+
+    50% {
+        transform: translateZ(200px);
+    }
+
+    100% {
+        transform: translateZ(0);
+    }
+}

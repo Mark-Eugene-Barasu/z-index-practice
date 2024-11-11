@@ -18,6 +18,7 @@ a {
     border: 5px solid red;
     position: relative;
     perspective: 500px;
+    overflow: scroll;
     /* Added perspective to enhance the 3D effect */
 }
 
@@ -61,5 +62,15 @@ img:hover {
 
     100% {
         transform: translateZ(0);
+    }
+}
+
+@media screen and (min-width:390px) {
+    .banner {
+        background-color: rgba(0, 255, 255, 0.416);
+    }
+    img {
+        width: 180px;
+        height: 180px;
     }
 }
